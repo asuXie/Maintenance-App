@@ -8,8 +8,8 @@ from PyQt5.uic import loadUi
         
 
 
-class AppWindow(QMainWindow):
+class AppWindowViewmodel(QMainWindow):
     def __init__(self):
-        super(AppWindow, self).__init__()
+        super(AppWindowViewmodel, self).__init__()
         loadUi('AppWindow.ui', self)
         
