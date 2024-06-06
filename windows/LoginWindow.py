@@ -2,7 +2,6 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog
 from PyQt5.uic import loadUi
-from windows import LoginWindow, AppWindow
 
  
 
@@ -20,25 +19,3 @@ class MainWindow(QMainWindow):
 
         
         
-
-
-class AppWindow(QMainWindow):
-    def __init__(self):
-        super(AppWindow, self).__init__()
-        loadUi('AppWindow.ui', self)
-        
-
-
-
-
-app = QApplication(sys.argv)
-window = MainWindow()
-
-widget = QtWidgets.QStackedWidget()
-
-widget.addWidget(window)
-widget.setFixedWidth(1200)
-widget.setFixedHeight(800)
-widget.show()
-
-app.exec_()
